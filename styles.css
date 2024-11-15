@@ -1,0 +1,259 @@
+/* Reset and Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+  background-color: #f9f9f9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+}
+
+header .logo {
+  width: 150px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cta-button {
+  background-color: #e5a900;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d49000;
+  transform: translateY(-3px);
+}
+
+.services, .about-preview, .contact-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+}
+
+.contact-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+}
+
+button.cta-button {
+  background-color: #e5a900;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.cta-button:hover {
+  background-color: #d49000;
+  transform: translateY(-3px);
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer nav a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #fff;
+}
+
+/* Updated CSS for About Us Page */
+
+/* Hero Section for About Us */
+.about-hero {
+  position: relative;
+  background: url('images/about.jpg') no-repeat center center/cover;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.about-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.about-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.1em;
+}
+
+/* About Content Section */
+.about-content {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.about-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Ensuring responsive image sizing */
+.about-image {
+  width: 100%;        /* Use 100% width to make image scale within container */
+  max-width: 400px;   /* Set a max width to prevent oversized images on large screens */
+  border-radius: 8px;
+  object-fit: cover;  /* Ensures the image fills its container without distortion */
+  flex-shrink: 0;     /* Keeps image from shrinking too small on narrow screens */
+}
+
+.about-text {
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.about-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer nav a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-box {
+      flex-direction: column;
+      align-items: center;
+  }
+  .about-image {
+      width: 80%;        /* Adjust image size to be 80% of container width on mobile */
+      max-width: 300px;  /* Ensure it doesn’t get too large on smaller screens */
+      margin-bottom: 20px;
+  }
+  .about-hero h1 {
+      font-size: 2em;
+  }
+  .about-hero p {
+      font-size: 1em;
+  }
+}
