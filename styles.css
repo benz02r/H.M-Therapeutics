@@ -33,7 +33,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #111;
+  background-color: black;
   color: #fff;
 }
 
@@ -86,7 +86,7 @@ header .logo {
       position: absolute;
       top: 60px;
       right: 20px;
-      background-color: #111;
+      background-color: black;
       border-radius: 8px;
       padding: 10px;
       width: 200px;
