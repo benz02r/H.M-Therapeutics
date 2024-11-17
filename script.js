@@ -30,8 +30,7 @@ if (contactForm) {
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phonePattern = /^[0-9]{10}$/;
-
+      
         if (!emailPattern.test(email)) {
             formMessage.textContent = "Please enter a valid email address.";
             formMessage.style.color = "red";
@@ -39,7 +38,7 @@ if (contactForm) {
         }
 
         if (!phonePattern.test(phone)) {
-            formMessage.textContent = "Please enter a valid 10-digit phone number.";
+            formMessage.textContent = "Please enter a valid 11-digit phone number.";
             formMessage.style.color = "red";
             return;
         }
