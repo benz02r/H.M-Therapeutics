@@ -6,16 +6,24 @@
     <title>HM Therapeutics - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header>
         <img src="images/logo.png" alt="HM Therapeutics Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section class="hero">
@@ -48,12 +56,6 @@
         </div>
     </section>
 
-    <section class="about-preview">
-        <h2>About Us</h2>
-        <p>We are dedicated to helping you achieve optimal wellness through tailored massage therapy techniques.</p>
-        <a href="about.html" class="cta-button">Learn More</a>
-    </section>
-
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 HM Therapeutics. All rights reserved.</p>
@@ -61,7 +63,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
-               
+             
             </nav>
         </div>
     </footer>
