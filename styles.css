@@ -304,3 +304,8 @@ footer nav a:hover {
       font-size: 1em;
   }
 }
+
+#form-message {
+  margin-top: 10px;
+  font-size: 1rem;
+}

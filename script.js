@@ -9,45 +9,43 @@ if (hamburger && mainNav) {
     });
 }
 
-// Contact Form Submission (if on Contact Us page)
+// Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault(); // Prevent the default form submission
+        e.preventDefault(); // Prevent default form submission behavior
 
-        // Form fields
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const message = document.getElementById('message').value.trim();
         const formMessage = document.getElementById('form-message');
 
-        // Validate each field
-        if (!name || !email || !phone || !message) {
-            formMessage.textContent = "Please fill out all fields.";
+        // Validate the form fields
+        if (!name || !email || !message) {
+            formMessage.textContent = "Please fill out all required fields.";
             formMessage.style.color = "red";
             return;
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      
+
         if (!emailPattern.test(email)) {
             formMessage.textContent = "Please enter a valid email address.";
             formMessage.style.color = "red";
             return;
         }
 
-        if (!phonePattern.test(phone)) {
-            formMessage.textContent = "Please enter a valid 11-digit phone number.";
+        // Optional phone validation (if phone input is not empty)
+        if (phone && phone.length < 5) {
+            formMessage.textContent = "Please enter a valid phone number.";
             formMessage.style.color = "red";
             return;
         }
 
-        // Prepare Form Data for Formspree
-        const formData = new FormData(contactForm);
-
         try {
-            // Send data to Formspree
+            // Send form data to Formspree
+            const formData = new FormData(contactForm);
             const response = await fetch(contactForm.action, {
                 method: "POST",
                 body: formData,
