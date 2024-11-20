@@ -311,3 +311,7 @@ footer nav a:hover {
   margin-top: 10px;
   font-size: 1rem;
 }
+.contact-section iframe {
+    border-radius: 10px;
+    margin-top: 20px;
+}
