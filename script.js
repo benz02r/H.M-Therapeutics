@@ -68,3 +68,24 @@ if (contactForm) {
         }
     });
 }
+
+
+// Modal Toggle
+function toggleModal(serviceId) {
+    document.getElementById(`${serviceId}-modal`).classList.toggle("active");
+}
+
+// Scroll Animation Observer
+document.addEventListener("DOMContentLoaded", () => {
+    const serviceItems = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.3 });
+
+    serviceItems.forEach(item => observer.observe(item));
+});
