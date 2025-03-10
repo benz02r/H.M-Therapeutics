@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar"; // Import Navbar
 const services = [
     { id: "sports-injury", icon: "sports_kabaddi", title: "Sports Injury Relief", description: "Focused massage therapy for sports-related injuries." },
     { id: "relaxation", icon: "self_improvement", title: "Relaxation / Restoration", description: "Therapeutic techniques to reduce stress and promote healing." },
-    { id: "recovery", icon: "fitness_center", title: "Tailored Recovery Programme", description: "Specialized support for faster, safer recovery." },
+    { id: "recovery", icon: "fitness_center", title: "Tailored Recovery Programme", description: "Specialised support for faster, safer recovery." },
     { id: "pain-relief", icon: "healing", title: "Pain Relief", description: "Effective pain management through targeted massage." },
     { id: "cupping", icon: "spa", title: "Cupping Therapy", description: "Reduce muscle soreness using negative pressure." },
     { id: "sauna", icon: "hot_tub", title: "Sauna Pod", description: "Improve circulation to help ease muscle tightness." },

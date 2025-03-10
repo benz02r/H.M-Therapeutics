@@ -37,7 +37,7 @@ const services = [
     },
     {
         id: "feet-calves",
-        title: "Minimize Chronic Foot & Calf Pain",
+        title: "Minimise Chronic Foot & Calf Pain",
         description: "Your foot health is the foundation of the rest of your leg’s well-being.",
         details: [
             "You were told to just rest and take painkillers.",
