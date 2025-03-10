@@ -21,9 +21,12 @@ export default function Home() {
             {/* Navbar */}
             <Navbar />
 
-            {/* Hero Section with Smooth Fade-in */}
+            {/* Black spacer below navbar */}
+            <div className="bg-black h-[80px] md:h-[100px] lg:h-[120px]"></div>
+
+            {/* Hero Section with Proper Spacing */}
             <motion.section
-                className="relative h-[500px] bg-[url('/images/hero.jpg')] bg-cover bg-center flex items-center justify-center text-center text-white mt-16"
+                className="relative h-[500px] bg-[url('/images/hero.jpg')] bg-cover bg-center flex items-center justify-center text-center text-white"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}
@@ -44,6 +47,7 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
             </motion.section>
+
 
             {/* Services Section with Staggered Animations */}
             <section className="py-16 bg-gray-100">
