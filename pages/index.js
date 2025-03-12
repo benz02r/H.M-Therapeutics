@@ -20,10 +20,15 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Sports & Relaxation Massage Therapy | Expert Pain Relief & Recovery</title>
-                <meta name="description" content="Professional massage therapy for sports injury relief, relaxation, pain management, and muscle recovery. Book your session today for expert care!" />
-                <meta name="keywords" content="sports massage, pain relief, cupping therapy, muscle recovery, relaxation massage, infrared sauna, injury recovery" />
+                <title>Sports & Relaxation Massage | HM Therapeutics</title>
+                <meta name="description" content="Expert massage therapy for sports injuries, relaxation, and pain relief. Book with HM Therapeutics for cupping therapy, sauna treatments & recovery programs." />
+                <meta name="keywords" content="sports massage, pain relief, cupping therapy, relaxation, muscle recovery, sauna therapy, injury recovery" />
+                <meta property="og:title" content="Sports & Relaxation Massage | HM Therapeutics" />
+                <meta property="og:description" content="Professional massage therapy for sports injuries, pain relief, and relaxation. Visit HM Therapeutics today for recovery treatments!" />
+                <meta property="og:url" content="https://www.hmtherapeutics.co.uk" />
+                <meta property="og:type" content="website" />
             </Head>
+
             <div className="min-h-screen bg-gray-50">
                 <Navbar />
                 <div className="bg-black h-[80px] md:h-[100px] lg:h-[120px]"></div>
