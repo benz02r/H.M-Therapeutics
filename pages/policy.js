@@ -39,19 +39,19 @@ export default function Policy() {
                         </p>
 
                         <div className="mt-6 space-y-4">
-                            <p><strong>📩 Enquiries:</strong> All pricing and booking inquiries must be handled via email or telephone. If you contact us by phone, an email address is still required for completing the pre-treatment consultation form and deposit payment.</p>
+                            <p><strong> Enquiries:</strong> All pricing and booking inquiries must be handled via email or telephone. If you contact us by phone, an email address is still required for completing the pre-treatment consultation form and deposit payment.</p>
 
-                            <p><strong>📞 Missed Calls:</strong> If your call is not answered, I am likely with a client. I will call back as soon as possible. Alternatively, you can send an email, and I will get back to you promptly.</p>
+                            <p><strong> Missed Calls:</strong> If your call is not answered, I am likely with a client. I will call back as soon as possible. Alternatively, you can send an email, and I will get back to you promptly.</p>
 
-                            <p><strong>💰 Deposits:</strong> All bookings, including future and same-day bookings, require a £15 deposit, which will be deducted from your final total. Deposits are non-refundable.</p>
+                            <p><strong> Deposits:</strong> All bookings, including future and same-day bookings, require a £15 deposit, which will be deducted from your final total. Deposits are non-refundable.</p>
 
-                            <p><strong>📆 Cancellations & Rescheduling:</strong> A minimum of 24 hours' notice is required for cancellations or rescheduling. Failure to do so will result in a charge.</p>
+                            <p><strong> Cancellations & Rescheduling:</strong> A minimum of 24 hours' notice is required for cancellations or rescheduling. Failure to do so will result in a charge.</p>
 
-                            <p><strong>🚫 No Shows:</strong> Clients who do not show up for their appointment will be charged the full price of the session.</p>
+                            <p><strong> No Shows:</strong> Clients who do not show up for their appointment will be charged the full price of the session.</p>
 
-                            <p><strong>🕒 Initial Appointments:</strong> All first-time appointments last 60 minutes, including a face-to-face consultation and treatment.</p>
+                            <p><strong> Initial Appointments:</strong> All first-time appointments last 60 minutes, including a face-to-face consultation and treatment.</p>
 
-                            <p><strong>📄 Consultation Form:</strong> Once you have booked, a consultation form will be sent via email. This must be completed at least one hour before your appointment.</p>
+                            <p><strong> Consultation Form:</strong> Once you have booked, a consultation form will be sent via email. This must be completed at least one hour before your appointment.</p>
                         </div>
                     </motion.div>
                 </div>

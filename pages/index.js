@@ -45,7 +45,9 @@ export default function Home() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1.2 }}
                     >
-                        <h1 className="text-5xl font-extrabold">Expert Sports & Relaxation Massage Therapy</h1>
+                        <h1 className="text-5xl font-extrabold mt-16 sm:mt-6">
+                            Expert Sports & Relaxation Massage Therapy
+                        </h1>
                         <p className="mt-3 text-lg opacity-90">Recover faster, relieve pain, and enhance your well-being with our specialized treatments.</p>
                         <motion.div whileHover={{ scale: 1.05 }}>
                             <Link href="/contact" className="mt-6 inline-block bg-[#e5a900] hover:bg-[#d49000] px-6 py-3 text-white font-medium rounded-md transition">
