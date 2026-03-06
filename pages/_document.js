@@ -4,21 +4,21 @@ export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                {/* Meta Pixel Code */}
+                {/* Meta Pixel Code - Note: This is also in _app.js for SPA navigation */}
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '3039279902900287');
-              fbq('track', 'PageView');
-            `,
+                            !function(f,b,e,v,n,t,s)
+                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                            n.queue=[];t=b.createElement(e);t.async=!0;
+                            t.src=v;s=b.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t,s)}(window, document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+                            fbq('init', '3039279902900287');
+                            fbq('track', 'PageView');
+                        `,
                     }}
                 />
                 <noscript>
@@ -27,11 +27,11 @@ export default function Document() {
                         width="1"
                         style={{ display: "none" }}
                         src="https://www.facebook.com/tr?id=3039279902900287&ev=PageView&noscript=1"
+                        alt=""
                     />
                 </noscript>
-                {/* End Meta Pixel Code */}
             </Head>
-            <body className="antialiased">
+            <body className="antialiased bg-gray-50">
             <Main />
             <NextScript />
             </body>
