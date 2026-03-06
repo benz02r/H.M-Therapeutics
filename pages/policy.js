@@ -69,20 +69,55 @@ const faqs = [
 ];
 
 export default function Policy() {
+    // FAQ Schema Markup for Google Rich Snippets
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
     return (
         <>
             <Head>
-                <title>Booking Policy & Terms | HM Therapeutics</title>
+                <title>Booking Policy & Terms | HM Therapeutics Wolverhampton</title>
                 <meta
                     name="description"
-                    content="Read HM Therapeutics booking policy, cancellation terms, and appointment guidelines. Deposit required. 24 hours cancellation notice needed."
+                    content="Read HM Therapeutics booking policy, cancellation terms, and appointment guidelines. Deposit required. 24 hours cancellation notice needed for massage appointments in Wolverhampton."
                 />
                 <meta
                     name="keywords"
-                    content="booking policy, cancellation policy, appointment terms, massage therapy policy, treatment guidelines"
+                    content="booking policy, cancellation policy, appointment terms, massage therapy policy, wolverhampton massage guidelines"
                 />
-                <meta property="og:title" content="Booking Policy & Terms | HM Therapeutics" />
+
+                {/* Open Graph Tags */}
+                <meta property="og:title" content="Booking Policy & Terms | HM Therapeutics Wolverhampton" />
+                <meta property="og:description" content="View our clinic policies, cancellation terms, and general guidelines for sports and relaxation massage." />
+                <meta property="og:url" content="https://www.hmtherapeutics.co.uk/policy" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+                <meta property="og:site_name" content="HM Therapeutics" />
+                <meta property="og:locale" content="en_GB" />
+
+                {/* Twitter Cards */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Booking Policy & Terms | HM Therapeutics" />
+                <meta name="twitter:description" content="Read our booking and cancellation policies prior to your massage appointment." />
+                <meta name="twitter:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+
                 <link rel="canonical" href="https://www.hmtherapeutics.co.uk/policy" />
+
+                {/* Inject FAQ Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
             </Head>
 
             <div className="min-h-screen bg-background text-secondary font-sans">
@@ -348,13 +383,13 @@ export default function Policy() {
                             <div className="md:col-span-2 flex flex-col items-center md:items-start">
                                 <Image
                                     src="/images/logo.png"
-                                    alt="HM Therapeutics Logo"
+                                    alt="HM Therapeutics Wolverhampton Logo"
                                     width={120}
                                     height={42}
                                     className="mb-4 opacity-90"
                                 />
                                 <p className="text-gray-400 font-light leading-relaxed max-w-sm">
-                                    Professional sports and relaxation massage therapy in Walsall.
+                                    Professional sports and relaxation massage therapy in Wolverhampton.
                                     Expert care for injury recovery, pain relief, and wellness.
                                 </p>
                             </div>
@@ -377,7 +412,7 @@ export default function Policy() {
                             <div className="flex flex-col items-center md:items-start">
                                 <h3 className="text-lg font-serif mb-4 text-white">Contact</h3>
                                 <div className="text-gray-400 font-light space-y-2 text-sm">
-                                    <p>Walsall, UK</p>
+                                    <p>Wolverhampton, UK</p>
                                     <p>By appointment only</p>
                                 </div>
                             </div>

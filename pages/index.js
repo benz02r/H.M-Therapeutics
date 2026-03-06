@@ -11,19 +11,19 @@ const services = [
         id: "sports-injury",
         icon: "sports_kabaddi",
         title: "Sports Injury Relief",
-        description: "Professional massage therapy for sports-related injuries, helping athletes recover faster and perform better.",
+        description: "Professional sports therapy in Wolverhampton for athletes and active individuals.",
     },
     {
         id: "relaxation",
         icon: "self_improvement",
         title: "Relaxation & Restoration",
-        description: "Reduce stress and promote overall well-being with our expert therapeutic relaxation techniques.",
+        description: "Reduce stress and promote overall wellness with our expert massage techniques.",
     },
     {
         id: "recovery",
         icon: "fitness_center",
         title: "Tailored Recovery Programs",
-        description: "Customized recovery plans designed to accelerate healing and prevent future injuries.",
+        description: "Customised recovery plans designed to accelerate healing and prevent future injuries.",
     },
     {
         id: "pain-relief",
@@ -34,30 +34,89 @@ const services = [
     {
         id: "cupping",
         icon: "spa",
-        title: "Cupping Therapy for Muscle Recovery",
-        description: "Boost circulation and reduce muscle tension with our cupping therapy services.",
+        title: "Cupping Therapy",
+        description: "Boost circulation and reduce muscle tension with our specialised cupping services.",
     },
     {
         id: "sauna",
         icon: "hot_tub",
-        title: "Infrared Sauna Pod Treatment",
-        description: "Improve circulation, detoxify, and relieve muscle stiffness with our cutting-edge sauna pod treatments.",
+        title: "Infrared Sauna Pod",
+        description: "Improve circulation, detoxify, and relieve stiffness with cutting edge sauna treatments.",
     },
 ];
 
 export default function Home() {
     const [modalOpen, setModalOpen] = useState(null);
 
+    // This is the invisible code that tells Google exactly where you are for "Near Me" searches
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "HM Therapeutics",
+        "image": "https://www.hmtherapeutics.co.uk/images/logo.png",
+        "description": "Expert sports therapy and relaxation massage in Wolverhampton, West Midlands.",
+        "@id": "https://www.hmtherapeutics.co.uk",
+        "url": "https://www.hmtherapeutics.co.uk",
+        "telephone": "", // Add your phone number here later if you wish
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "", // Add street if you want it public
+            "addressLocality": "Wolverhampton",
+            "addressRegion": "West Midlands",
+            "postalCode": "", // Add your postcode to boost "Near Me" accuracy
+            "addressCountry": "UK"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "52.5869", // Approximate Wolverhampton latitude
+            "longitude": "-2.1288" // Approximate Wolverhampton longitude
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "17:00"
+            }
+        ],
+        "priceRange": "££",
+        "areaServed": ["Wolverhampton", "West Midlands", "Walsall", "Dudley"]
+    };
+
     return (
         <>
             <Head>
-                <title>Sports & Relaxation Massage | HM Therapeutics</title>
-                <meta name="description" content="Expert massage therapy for sports injuries, relaxation, and pain relief. Book with HM Therapeutics for cupping therapy, sauna treatments & recovery programs." />
-                <meta name="keywords" content="sports massage, pain relief, cupping therapy, relaxation, muscle recovery, sauna therapy, injury recovery" />
-                <meta property="og:title" content="Sports & Relaxation Massage | HM Therapeutics" />
-                <meta property="og:description" content="Professional massage therapy for sports injuries, pain relief, and relaxation. Visit HM Therapeutics today for recovery treatments!" />
+                {/* Optimised Title & Meta for your requested keywords */}
+                <title>Sports Therapy & Massage Wolverhampton | HM Therapeutics</title>
+                <meta name="description" content="Expert sports therapy and relaxation massage in Wolverhampton, West Midlands. Book a premium massage near you for pain relief, recovery, and wellness." />
+                <meta name="keywords" content="massage wolverhampton, sports therapy wolverhampton, massage near me, massage west midlands, sports massage, pain relief clinic" />
+
+                {/* Open Graph / Social Media Tags */}
+                <meta property="og:title" content="Sports Therapy & Massage Wolverhampton | HM Therapeutics" />
+                <meta property="og:description" content="Professional massage therapy in Wolverhampton. Visit HM Therapeutics today for sports recovery and relaxation treatments in the West Midlands." />
                 <meta property="og:url" content="https://www.hmtherapeutics.co.uk" />
                 <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+                <meta property="og:site_name" content="HM Therapeutics" />
+                <meta property="og:locale" content="en_GB" />
+
+                {/* Twitter Cards */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Sports Therapy & Massage Wolverhampton | HM Therapeutics" />
+                <meta name="twitter:description" content="Expert massage therapy in Wolverhampton for sports injuries, relaxation, and pain relief." />
+                <meta name="twitter:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+
+                {/* Inject Local Business Schema JSON-LD */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
             </Head>
 
             {/* Mailchimp Connected Sites Script */}
@@ -85,7 +144,6 @@ export default function Home() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.5 }}
                 >
-                    {/* Softer, more luxurious gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/95"></div>
 
                     <motion.div
@@ -95,10 +153,10 @@ export default function Home() {
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
                         <h1 className="text-4xl md:text-6xl font-serif text-white leading-tight font-medium">
-                            Elevate Your Healing & Recovery
+                            Wolverhampton Sports Therapy & Massage
                         </h1>
                         <p className="mt-6 text-lg md:text-xl text-gray-200 font-light tracking-wide max-w-2xl mx-auto">
-                            Expert sports and relaxation massage therapy tailored to restore your body and mind.
+                            Expert clinical massage therapy in the West Midlands tailored to restore your body and mind.
                         </p>
                         <div className="mt-10">
                             <Link href="/contact" className="inline-block bg-accent text-white px-8 py-4 uppercase tracking-widest text-sm font-semibold rounded-sm shadow-lg hover:bg-accentHover transition-colors duration-300">
@@ -165,7 +223,7 @@ export default function Home() {
                     <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
                         <Image
                             src="/images/logo.png"
-                            alt="HM Therapeutics Logo"
+                            alt="HM Therapeutics Wolverhampton Logo"
                             width={120}
                             height={42}
                             className="opacity-90"
@@ -183,7 +241,7 @@ export default function Home() {
                         </nav>
                         <div className="w-24 h-[1px] bg-gray-700 mb-6"></div>
                         <p className="text-sm text-gray-500 font-light">
-                            &copy; {new Date().getFullYear()} HM Therapeutics. All rights reserved.
+                            &copy; {new Date().getFullYear()} HM Therapeutics Wolverhampton. All rights reserved.
                         </p>
                     </div>
                 </footer>

@@ -136,20 +136,81 @@ export default function Services() {
     const [openService, setOpenService] = useState(null);
     const [activeTab, setActiveTab] = useState("pain-relief");
 
+    // FAQ Schema Markup for Google Rich Snippets
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long is each session?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Session lengths vary depending on the specific treatment. Initial appointments include a full consultation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to bring anything?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Just yourself! I provide everything needed for your treatment. Wear comfortable clothing and complete your consultation form before arrival."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How often should I book treatments?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This depends on your individual needs. For chronic pain, weekly sessions are recommended initially. For maintenance and relaxation, bi weekly or monthly visits work well."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is your cancellation policy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I require 24 hours notice for cancellations or rescheduling. Please see the policy page for full details."
+                }
+            }
+        ]
+    };
+
     return (
         <>
             <Head>
-                <title>Massage Therapy Services | HM Therapeutics</title>
+                <title>Massage Therapy Services Wolverhampton | HM Therapeutics</title>
                 <meta
                     name="description"
-                    content="Professional massage therapy services: sports massage, pain relief, cupping therapy, infrared sauna. Book your appointment today."
+                    content="Professional massage therapy services in Wolverhampton: sports massage, pain relief, cupping therapy, infrared sauna. Book your appointment today."
                 />
                 <meta
                     name="keywords"
-                    content="massage therapy, sports massage, back pain treatment, cupping therapy, sauna treatment, deep tissue massage"
+                    content="massage therapy wolverhampton, sports massage, back pain treatment, cupping therapy, sauna treatment, deep tissue massage"
                 />
-                <meta property="og:title" content="Massage Therapy Services | HM Therapeutics" />
+
+                {/* Open Graph Tags */}
+                <meta property="og:title" content="Massage Therapy Services Wolverhampton | HM Therapeutics" />
+                <meta property="og:description" content="Explore our premium sports and relaxation massage treatments in the West Midlands." />
+                <meta property="og:url" content="https://www.hmtherapeutics.co.uk/services" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+                <meta property="og:site_name" content="HM Therapeutics" />
+                <meta property="og:locale" content="en_GB" />
+
+                {/* Twitter Cards */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Massage Therapy Services | HM Therapeutics" />
+                <meta name="twitter:description" content="Expert massage therapy for sports injuries, relaxation, and pain relief." />
+                <meta name="twitter:image" content="https://www.hmtherapeutics.co.uk/images/hero.jpg" />
+
                 <link rel="canonical" href="https://www.hmtherapeutics.co.uk/services" />
+
+                {/* Inject FAQ Schema */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                />
             </Head>
 
             <div className="min-h-screen bg-background text-secondary font-sans">
@@ -541,7 +602,7 @@ export default function Services() {
                             <div className="md:col-span-2 flex flex-col items-center md:items-start">
                                 <Image
                                     src="/images/logo.png"
-                                    alt="HM Therapeutics Logo"
+                                    alt="HM Therapeutics Wolverhampton Logo"
                                     width={120}
                                     height={42}
                                     className="mb-4 opacity-90"
